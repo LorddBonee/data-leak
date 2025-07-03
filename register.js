@@ -8,7 +8,7 @@ async function register() {
   }
 
   try {
-    const res = await fetch('https://securevault.loca.lt/api/users/register', {
+    const res = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com//api/users/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })

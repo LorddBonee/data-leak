@@ -9,7 +9,7 @@ async function login() {
   }
 
   try {
-    const res = await fetch('https://securevault.loca.lt/api/users/login', {
+    const res = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com//api/users/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -28,7 +28,7 @@ async function login() {
 
     // Store secret if user has permission
     if (secret && data.capabilities.includes('store')) {
-      const storeRes = await fetch('https://securevault.loca.lt/api/users/store', {
+      const storeRes = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com//api/users/store', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
