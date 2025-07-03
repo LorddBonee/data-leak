@@ -2,7 +2,7 @@ async function register() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  const res = await fetch('http://localhost:8081/api/users/register', {
+  const res = await fetch('https://securevault.loca.lt/api/users/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password })

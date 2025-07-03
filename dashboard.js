@@ -15,7 +15,7 @@ async function storeSecret() {
   if (!secret) return showToast('⚠️ Secret is empty.', 2500, 'warn');
 
   try {
-    const res = await fetch('http://localhost:8081/api/users/store', {
+    const res = await fetch('https://securevault.loca.lt/api/users/store', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ async function storeSecret() {
 
 async function loadSecrets() {
   try {
-    const res = await fetch('http://localhost:8081/api/users/read', {
+    const res = await fetch('https://securevault.loca.lt/api/users/read', {
       headers: { Authorization: `Bearer ${token}` },
     });
 
