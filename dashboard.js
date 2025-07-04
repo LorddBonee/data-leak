@@ -15,7 +15,7 @@ async function storeSecret() {
   if (!secret) return showToast('⚠️ Secret is empty.', 2500, 'warn');
 
   try {
-    const res = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com//api/users/store', {
+    const res = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com/api/users/store', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

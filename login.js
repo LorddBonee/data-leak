@@ -28,7 +28,7 @@ async function login() {
 
     // Store secret if user has permission
     if (secret && data.capabilities.includes('store')) {
-      const storeRes = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com//api/users/store', {
+      const storeRes = await fetch('https://86beqm147d.execute-api.us-east-1.amazonaws.com/api/users/store', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
